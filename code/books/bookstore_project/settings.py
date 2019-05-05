@@ -37,12 +37,19 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # Third party apps
+    'crispy_forms',
 
     # Local apps
     'users.apps.UsersConfig',
     'pages.apps.PagesConfig',
 ]
+
+# Telling django to use this Custom user model
 AUTH_USER_MODEL = 'users.CustomUser'
+
+# django crispy form
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
